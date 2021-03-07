@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76185BE2-A822-46F1-837D-E59088E7CF4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DesignPatternsTest</RootNamespace>
+    <AssemblyName>DesignPatternsTest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\Animal.cs" />
+    <Compile Include="AbstractFactory\AnimalFactory.cs" />
+    <Compile Include="AbstractFactory\Cat.cs" />
+    <Compile Include="AbstractFactory\Dog.cs" />
+    <Compile Include="AbstractFactory\LandAnimalFactory.cs" />
+    <Compile Include="AbstractFactory\Lion.cs" />
+    <Compile Include="AbstractFactory\Octopus.cs" />
+    <Compile Include="AbstractFactory\SeaAnimalFactory.cs" />
+    <Compile Include="AbstractFactory\Shark.cs" />
+    <Compile Include="Adapter\Employee.cs" />
+    <Compile Include="Adapter\EmployeeAdapter.cs" />
+    <Compile Include="Adapter\ITarget.cs" />
+    <Compile Include="Adapter\ThirdPartyBillingSystem.cs" />
+    <Compile Include="Builder\ExcelReport.cs" />
+    <Compile Include="Builder\PDFReport.cs" />
+    <Compile Include="Builder\Report.cs" />
+    <Compile Include="Builder\ReportBuilder.cs" />
+    <Compile Include="Builder\ReportDirector.cs" />
+    <Compile Include="Command\CloseCommand.cs" />
+    <Compile Include="Command\Document.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\MenuOptions.cs" />
+    <Compile Include="Command\OpenCommand.cs" />
+    <Compile Include="Command\SaveCommand.cs" />
+    <Compile Include="Decorator\BMWCar.cs" />
+    <Compile Include="Decorator\CarDecorator.cs" />
+    <Compile Include="Decorator\DieselCarDecorator.cs" />
+    <Compile Include="Decorator\ICar.cs" />
+    <Compile Include="Decorator\PetrolCarDecorator.cs" />
+    <Compile Include="Facade\Invoice.cs" />
+    <Compile Include="Facade\Order.cs" />
+    <Compile Include="Facade\Payment.cs" />
+    <Compile Include="Facade\Product.cs" />
+    <Compile Include="FactoryMethod\CreditCard.cs" />
+    <Compile Include="FactoryMethod\CreditCardFactory.cs" />
+    <Compile Include="FactoryMethod\MoneyBack.cs" />
+    <Compile Include="FactoryMethod\MoneyBackFactory.cs" />
+    <Compile Include="FactoryMethod\Platinum.cs" />
+    <Compile Include="FactoryMethod\PlatinumFactory.cs" />
+    <Compile Include="FactoryMethod\Titanium.cs" />
+    <Compile Include="FactoryMethod\TitaniumFactory.cs" />
+    <Compile Include="Factory\CreditCard.cs" />
+    <Compile Include="Factory\CreditCardFactory.cs" />
+    <Compile Include="Factory\MoneyBack.cs" />
+    <Compile Include="Factory\Platinum.cs" />
+    <Compile Include="Factory\Titanium.cs" />
+    <Compile Include="MainDesignPatternsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDesignPatternsForm.Designer.cs">
+      <DependentUpon>MainDesignPatternsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Observer\IObserver.cs" />
+    <Compile Include="Observer\ISubject.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\Subject.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\Employee.cs" />
+    <Compile Include="Proxy\ISharedFolder.cs" />
+    <Compile Include="Proxy\SharedFolder.cs" />
+    <Compile Include="Proxy\SharedFolderProxy.cs" />
+    <Compile Include="Singleton\SingletonV1.cs" />
+    <Compile Include="Singleton\SingletonV2.cs" />
+    <EmbeddedResource Include="MainDesignPatternsForm.resx">
+      <DependentUpon>MainDesignPatternsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Factory\Factory.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
